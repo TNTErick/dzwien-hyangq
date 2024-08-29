@@ -13,7 +13,7 @@ const initialState = {
 export const uiSlice = createSlice({
     name: 'ui',
     initialState,
-    reducer: {
+    reducers: {
         toggleMenu: (state) => {
             state.menuOpen = !state.menuOpen;
         },

@@ -1,13 +1,13 @@
 import { capitalize, Tab } from "@mui/material";
 import './HeaderBar.css';
-import { SpaceBar } from "@mui/icons-material";
+import { uiSlice } from '../../redux/slices/uiSlice';
 
-const valTabs = ['home', 'about', 'contact'] as const;
+const valTabs = ['注音器', '編輯', '說明',  '語言'] as const;
 
 function Tabs() {
     return (
         <div id='tabs'>
-            {valTabs.map((tab) => <Tab key={tab} label={capitalize(tab)} />)}
+            {valTabs.map((tab) => <Tab key={tab} label={capitalize(tab)} onClick={} />)}
         </div>
     );
 }
@@ -15,12 +15,9 @@ function Tabs() {
 function HeaderBar() {
     return (
         <header id='header'>
-            <h1 id='title'>DzwienHyangq</h1>
-            <h2 id='subtitle'>Dzwienneong Tjuohqyim Khyih</h2>
-            <h3 id='version'>v0.0.1</h3>
-            {
-                // add empty 
-            }
+            <h1 id='title'>全響</h1>
+            <h2 id='subtitle'>多功能注音器</h2>
+            <h3 id='version'>{ _appVersion }</h3>
             <Tabs />
         </header>
     );
